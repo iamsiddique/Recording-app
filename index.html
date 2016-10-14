@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recorder</title>
+	<script type="text/javascript" src="script/angular.js"></script>
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="controllers/record.js"></script>
+	<script type="text/javascript" src="script/recorder.js"></script>
+	<script type="text/javascript" src="services/recordservice.js"></script>
+</head>
+<body ng-app="recordingApp" ng-controller="recordController" >
+<audio controls autoplay id="findtype"></audio>
+<input type="text" name="filename" ng-model="fileName">
+<input ng-click="startRecording()" type="button" value="start recording" />
+<input ng-click="stopRecording()" type="button" value="stop recording and play" ng-disabled="disableit"/>
+<input ng-click="save()" type="button" value="Save" />
+</body>
+</html>
